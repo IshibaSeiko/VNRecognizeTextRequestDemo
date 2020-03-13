@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5ck-E2-S8h">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Top View Controller-->
+        <scene sceneID="bhy-xs-1wn">
+            <objects>
+                <viewController id="5ck-E2-S8h" customClass="TopViewController" customModule="VNRecognizeTextRequestDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cyy-wf-5gV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ekb-6x-nsA">
+                                <rect key="frame" x="30" y="74" width="354" height="758"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unnamed" translatesAutoresizingMaskIntoConstraints="NO" id="XNX-MN-U19">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="339"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU2-em-Rsn">
+                                        <rect key="frame" x="147.5" y="369" width="59" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="3Wh-83-pat"/>
+                                        </constraints>
+                                        <state key="normal" title="Convert!"/>
+                                        <connections>
+                                            <action selector="didTapConvertButton:" destination="5ck-E2-S8h" eventType="touchUpInside" id="JsJ-YN-NAf"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypg-TU-86P">
+                                        <rect key="frame" x="0.0" y="419" width="354" height="339"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ypg-TU-86P" firstAttribute="height" secondItem="XNX-MN-U19" secondAttribute="height" id="Mq6-yA-B3u"/>
+                                    <constraint firstItem="XNX-MN-U19" firstAttribute="width" secondItem="ekb-6x-nsA" secondAttribute="width" id="gIM-vE-BrA"/>
+                                    <constraint firstItem="ypg-TU-86P" firstAttribute="width" secondItem="ekb-6x-nsA" secondAttribute="width" id="mac-tN-OHb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="x1d-Yj-G8D" firstAttribute="trailing" secondItem="ekb-6x-nsA" secondAttribute="trailing" constant="30" id="F1b-sA-ebG"/>
+                            <constraint firstItem="ekb-6x-nsA" firstAttribute="top" secondItem="x1d-Yj-G8D" secondAttribute="top" constant="30" id="Oh8-Kv-HGS"/>
+                            <constraint firstItem="x1d-Yj-G8D" firstAttribute="bottom" secondItem="ekb-6x-nsA" secondAttribute="bottom" constant="30" id="gW8-kv-0VS"/>
+                            <constraint firstItem="ekb-6x-nsA" firstAttribute="leading" secondItem="x1d-Yj-G8D" secondAttribute="leading" constant="30" id="lde-I2-QxH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x1d-Yj-G8D"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="XNX-MN-U19" id="CeF-nB-Ft6"/>
+                        <outlet property="textView" destination="ypg-TU-86P" id="hwP-xO-o0e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBV-vL-orJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="unnamed" width="512" height="349"/>
+    </resources>
+</document>
