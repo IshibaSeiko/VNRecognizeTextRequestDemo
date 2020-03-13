@@ -19,6 +19,9 @@ class TopViewController: UIViewController {
         converter.delegate = self
     }
 
+    @IBAction func didTapImage(_ sender: UITapGestureRecognizer) {
+    }
+    
     @IBAction func didTapConvertButton(_ sender: UIButton) {
         guard let image = imageView.image else {
             print("cannot get a image")
